@@ -12,6 +12,7 @@ import sys
 import fire
 import questionary
 from pathlib import Path
+from qualifier.utils.save_csv import save_csv
 
 from qualifier.utils.fileio import load_csv
 
@@ -105,25 +106,6 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
     return bank_data_filtered
 
 
-def save_csv(data):
-   
- # Set the output header
-    header = ["Lender", "Max Loan Amount", "Max LTV", "Max DTI", "Min Credit Score", "Interest Rate"]
-    
- # Set a Path to a new CSV file
-    csvpath = Path("qualifing_loan_data.csv")
-
- # Open the CSV File
-    with open(csvpath, 'w', newline='') as csvfile:     
-        csvwriter = csv.writer(csvfile, delimiter=",")
-    
-        # Write the header to the CSV file
-        csvwriter.writerow(header)
-
-        # Write each item in bank_data_filtered as a row in the CSV file   
-        for item in data:
-            csvwriter.writerow(item)
-    print("Successfully saved the qualifying data to qualifing_loan_data.csv file")
 
 
 def save_qualifying_loans(qualifying_loans):
@@ -134,7 +116,8 @@ def save_qualifying_loans(qualifying_loans):
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
-    save_csv(qualifying_loans)
+    new_csv_path_and_filename = "qualifing_loan_data_2.csv"
+    save_csv(qualifying_loans, new_csv_path_and_filename)
 
 
 
