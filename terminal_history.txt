@@ -1,0 +1,40 @@
+    1  ls
+    2  pwd
+    3  git clone git@github.com:sidbetatester/loan_qualifier_app.git
+    4  ls
+    5  cd loan_qualifier_app/
+    6  ls
+    7  code .
+    8  git add -A
+    9  git commit -m "Added folder structure for the Application and its helper files, including app.py, data folder, qualifier modules for filters, calculators and fileio, and a readme template"
+   10  git status
+   11  git push
+   12  git log
+   13  pwd
+   14  ls
+   15  python app.py
+   16  python app.py
+   17  git add-A
+   18  git add -A
+   19  git commit -m "Translated the Business Requirements into Code - to save results to new CSV file"
+   20  git push
+   21  python app.py
+   22  python app.py
+   23  python app.py
+   24  python app.py
+   25  python app.py
+   26  python app.py
+   27  python app.py
+   28  python app.py
+   29  git add -A
+   30  git commit -m "System Design: Organized save_csv function into a new module under utils andupdated the function and module docstrings within app.py"
+   31  git push
+   32  python app.py
+   33  python app.py
+   34  python app.py
+   35  python app.py
+   36  python app.py
+   37  git add -A
+   38  git commit -m "Usability: Updated the CLI to show user prompts for saving results and verified success criteria"
+   39  git push
+   40  history 50 > terminal_history.txt
