@@ -123,8 +123,8 @@ def save_qualifying_loans(qualifying_loans):
      
     # The tool should prompt the user to save the results as a CSV file, if user opts to save, then prompt them to provide path and filename for the new CSV.
 
-        Save_the_Data = questionary.confirm("Would you like to save the results to a CSV file?").ask()
-        if Save_the_Data:
+        save_the_data = questionary.confirm("Would you like to save the results to a CSV file?").ask()
+        if save_the_data:
             new_csv_path_and_filename = questionary.text("Please provide the path and name of your file in name.csv format").ask()
             save_csv(qualifying_loans, new_csv_path_and_filename)
 
