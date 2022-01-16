@@ -33,4 +33,4 @@ def save_csv(qualifying_loan_data, new_csv_path_and_filename):
         # Write each item in bank_data_filtered as a row in the CSV file   
         for item in qualifying_loan_data:
             csvwriter.writerow(item)
-    print("Successfully saved the qualifying data to qualifing_loan_data.csv file")
+    print("Successfully saved the qualifying data to new file")
